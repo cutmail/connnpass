@@ -16,22 +16,13 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
-{
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
-    }
-}
-
 - (void)configureView
 {
     // Update the user interface for the detail item.
+    self.title = self.event.title;
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.webView) {
+        [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.event.eventUrl] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0]];
     }
 }
 

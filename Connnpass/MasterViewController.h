@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <UISearchBarDelegate> {
+    NSMutableArray *events;
+    
+    dispatch_queue_t main_queue;
+    dispatch_queue_t timeline_queue;
+}
+
+@property (nonatomic, retain) NSMutableArray *events;
 
 @end
