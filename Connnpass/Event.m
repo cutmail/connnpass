@@ -10,32 +10,34 @@
 
 @implementation Event
 
+@synthesize title;
+@synthesize detail;
+@synthesize eventUrl;
+
 - (id)initWithDictionary:(NSDictionary *)dict
 {
     self = [super init];
-    if (self == nil) {
-        return nil;
+    if (self) {
+        eventId       = [dict objectForKey:@"event_id"];
+        title         = [dict objectForKey:@"title"];
+        detail        = [dict objectForKey:@"catch"];
+        infoHtml      = [dict objectForKey:@"description"];
+        eventUrl      = [dict objectForKey:@"event_url"];
+        hashTag       = [dict objectForKey:@"hash_tag"];
+        startedAt     = [dict objectForKey:@"started_at"];
+        endedAt       = [dict objectForKey:@"ended_at"];
+        limit         = [dict objectForKey:@"limit"];
+        eventType     = [dict objectForKey:@"event_type"];
+        address       = [dict objectForKey:@"address"];
+        place         = [dict objectForKey:@"place"];
+        lat           = [dict objectForKey:@"lat"];
+        lon           = [dict objectForKey:@"lon"];
+        ownerId       = [dict objectForKey:@"owner_id"];
+        ownerNickname = [dict objectForKey:@"owner_nickname"];
+        accepted      = [dict objectForKey:@"accepted"];
+        waiting       = [dict objectForKey:@"waiting"];
+        updatedAt     = [dict objectForKey:@"updated_at"];
     }
-    
-    _eventId       = [dict objectForKey:@"event_id"];
-    _title         = [dict objectForKey:@"title"];
-    _catch         = [dict objectForKey:@"catch"];
-    _infoHtml      = [dict objectForKey:@"description"];
-    _eventUrl      = [dict objectForKey:@"event_url"];
-    _hashTag       = [dict objectForKey:@"hash_tag"];
-    _startedAt     = [dict objectForKey:@"started_at"];
-    _endedAt       = [dict objectForKey:@"ended_at"];
-    _limit         = [dict objectForKey:@"limit"];
-    _eventType     = [dict objectForKey:@"event_type"];
-    _address       = [dict objectForKey:@"address"];
-    _place         = [dict objectForKey:@"place"];
-    _lat           = [dict objectForKey:@"lat"];
-    _lon           = [dict objectForKey:@"lon"];
-    _ownerId       = [dict objectForKey:@"owner_id"];
-    _ownerNickname = [dict objectForKey:@"owner_nickname"];
-    _accepted      = [dict objectForKey:@"accepted"];
-    _waiting       = [dict objectForKey:@"waiting"];
-    _updatedAt     = [dict objectForKey:@"updated_at"];
     
     return self;
 }

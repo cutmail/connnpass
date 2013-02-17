@@ -6,32 +6,32 @@
 //  Copyright (c) 2012年 cutmail. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Event : NSObject {
-    NSString* _eventId;
-    NSString* _title;
-    NSString* _catch;
-    NSString* _infoHtml;
-    NSString* _eventUrl;
-    NSString* _hashTag;
-    NSString* _startedAt;
-    NSString* _endedAt;
-    NSString* _limit;
-    NSString* _eventType;
-    NSString* _address;
-    NSString* _place;
-    NSString* _lat;
-    NSString* _lon;
-    NSString* _ownerId;
-    NSString* _ownerNickname;
-    NSString* _accepted;
-    NSString* _waiting;
-    NSString* _updatedAt;
+    NSString* eventId;
+    NSString* title;
+    NSString* detail;
+    NSString* infoHtml;
+    NSString* eventUrl;
+    NSString* hashTag;
+    NSString* startedAt;
+    NSString* endedAt;
+    NSString* limit;
+    NSString* eventType;
+    NSString* address;
+    NSString* place;
+    NSString* lat;
+    NSString* lon;
+    NSString* ownerId;
+    NSString* ownerNickname;
+    NSString* accepted;
+    NSString* waiting;
+    NSString* updatedAt;
 }
 
 @property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *catch;
+@property (nonatomic, retain) NSString *detail;
 @property (nonatomic, retain) NSString *eventUrl;
 
 - (id)initWithDictionary:(NSDictionary *)dict;

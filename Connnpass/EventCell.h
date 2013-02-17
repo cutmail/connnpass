@@ -10,6 +10,12 @@
 
 @class Event;
 
-@interface EventCell : UITableViewCell
+@interface EventCell : UITableViewCell {
+    UIView *cellContentView;
+}
+
+@property (nonatomic, retain) NSString *title;
+@property (nonatomic, retain) NSString *link;
+@property (nonatomic, retain) NSString *description;
 
 @end

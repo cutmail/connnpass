@@ -8,11 +8,12 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "EventCell.h"
 
 #import "Event.h"
 
-#define CONNPASS_API_SEARCH @"http://connpass.com/api/v1/event/?count=100&keyword_or=%@"
-#define CONNPASS_API_RECENT @"http://connpass.com/api/v1/event/?count=100"
+#define CONNPASS_API_SEARCH @"http://connpass.com/api/v1/event/?count=50&keyword_or=%@"
+#define CONNPASS_API_RECENT @"http://connpass.com/api/v1/event/?count=50"
 
 @interface MasterViewController () {
 }
@@ -130,6 +131,8 @@
 {
     [super viewDidLoad];
     
+    self.tableView.rowHeight = 65.0f;
+    
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
     _searchBar.delegate = self;
     _searchBar.showsCancelButton = NO;
@@ -147,10 +150,12 @@
 
 - (void)beginReload
 {
-    if (![_searchBar.text isEqualToString:@""]) {
-        [self loadEventWithKeyword:_searchBar.text];
-    } else {
+    NSLog(@"text: %@", _searchBar.text);
+    
+    if (!_searchBar.text || [_searchBar.text isEqualToString:@""]) {
         [self loadNewData];
+    } else {
+        [self loadEventWithKeyword:_searchBar.text];
     }
 }
 
@@ -170,7 +175,7 @@
 //    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 //}
 
-#pragma mark - Table View
+#pragma mark - TableView
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -179,73 +184,43 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return events ? [events count] : 0;
+    return [events count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *identifier = @"EventCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+{   
+    static NSString *identifier = @"Cell";
+    
+    EventCell *cell = (EventCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[EventCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    NSUInteger row = indexPath.row;
 
-    Event *event = [events objectAtIndex:indexPath.row];
-    cell.textLabel.numberOfLines = 2;
-    cell.textLabel.text = event.title;
-
-    cell.detailTextLabel.text = event.catch;
+    Event *event = [events objectAtIndex:row];
+    cell.title = event.title;
+    cell.description = event.detail;
+//    cell.title = @"title";
+//    cell.description = @"description";
+    
     return cell;
 }
 
-// 表示領域の横幅と文字の長さに応じて行の高さを取得
-- (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = indexPath.row;
     
-	UITableViewCell *cell = [self tableView:self.tableView cellForRowAtIndexPath:indexPath];
+    Event *event = [events objectAtIndex:row];
     
-	CGSize bounds = CGSizeMake(self.tableView.frame.size.width, self.tableView.frame.size.height);
-    //textLabelのサイズ
- 	CGSize size = [cell.textLabel.text sizeWithFont:cell.textLabel.font
-                                  constrainedToSize:bounds
-                                      lineBreakMode:NSLineBreakByTruncatingTail];
-    //detailTextLabelのサイズ
-	CGSize detailSize = [cell.detailTextLabel.text sizeWithFont: cell.detailTextLabel.font
-                                              constrainedToSize: bounds
-                                                  lineBreakMode: NSLineBreakByTruncatingTail];
-    CGFloat totalHeight = size.height + detailSize.height;
-  
-//    return totalHeight + 20;
-    return (totalHeight < 65) ? 65 : totalHeight + 15;
+    DetailViewController *vc = [[DetailViewController alloc] init];
+    vc.event = event;
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
+#pragma mark - SearchBar
 
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle == UITableViewCellEditingStyleDelete) {
-//        [_objects removeObjectAtIndex:indexPath.row];
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-//        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-//    }
-//}
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
     searchBar.showsCancelButton = YES;
