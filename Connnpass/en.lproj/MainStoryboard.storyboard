@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="VHk-Gs-gnK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Navigation Controller - Item-->
         <scene sceneID="11">
             <objects>
                 <navigationController id="3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="zmB-Rx-aEG"/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -23,18 +24,97 @@
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Connnpass" id="36">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="KY5-Xm-wLJ"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Connnpass" id="36"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vvw-VB-t2o">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="VHk-Gs-gnK" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="wey-D7-Sb4">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3" kind="relationship" relationship="viewControllers" id="62Y-IM-Tfc"/>
+                        <segue destination="1dY-gM-ScD" kind="relationship" relationship="viewControllers" id="kNc-V9-LRZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR0-OP-Z1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-571" y="539"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="Pg2-6D-nYC">
+            <objects>
+                <navigationController id="1dY-gM-ScD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Fb4-S0-ArH"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fA6-eQ-L44">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Rz-v4-MKd" kind="relationship" relationship="rootViewController" id="LbF-Q9-pPP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="745-ch-DyU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="936"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="aGu-sd-ZcO">
+            <objects>
+                <viewController id="2Rz-v4-MKd" customClass="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LrQ-IS-1kY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="fYu-38-shj">
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2Rz-v4-MKd" id="kCf-fD-EZD"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fYu-38-shj" firstAttribute="leading" secondItem="LrQ-IS-1kY" secondAttribute="leading" type="default" id="Gn3-gV-e4v"/>
+                            <constraint firstItem="fYu-38-shj" firstAttribute="trailing" secondItem="LrQ-IS-1kY" secondAttribute="trailing" type="default" id="SE3-BF-mL3"/>
+                            <constraint firstItem="fYu-38-shj" firstAttribute="top" secondItem="LrQ-IS-1kY" secondAttribute="top" type="default" id="lNJ-sA-RTP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X8A-QM-WqY"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="kWr-Eo-mvp" id="2WX-ws-dY1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H9A-Ws-VuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="kWr-Eo-mvp">
+                    <connections>
+                        <outlet property="delegate" destination="2Rz-v4-MKd" id="gJB-bQ-adt"/>
+                        <outlet property="searchBar" destination="fYu-38-shj" id="ws8-bO-848"/>
+                        <outlet property="searchContentsController" destination="2Rz-v4-MKd" id="aXe-i2-Vc2"/>
+                        <outlet property="searchResultsDataSource" destination="2Rz-v4-MKd" id="fg7-BI-duG"/>
+                        <outlet property="searchResultsDelegate" destination="2Rz-v4-MKd" id="bvv-WC-MEr"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="488" y="936"/>
+        </scene>
     </scenes>
     <classes>
         <class className="MasterViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

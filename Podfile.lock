@@ -1,13 +1,29 @@
 
 PODS:
+- ASIHTTPRequest (1.8.1):
+  - ASIHTTPRequest/ASIWebPageRequest (= 1.8.1)
+  - ASIHTTPRequest/CloudFiles (= 1.8.1)
+  - ASIHTTPRequest/S3 (= 1.8.1)
+  - Reachability
+- ASIHTTPRequest/ASIWebPageRequest (1.8.1):
+  - Reachability
+- ASIHTTPRequest/CloudFiles (1.8.1):
+  - Reachability
+- ASIHTTPRequest/S3 (1.8.1):
+  - Reachability
 - GHUnitIOS (0.5.6)
 - Reachability (3.1.0)
 
 DEPENDENCIES:
+- ASIHTTPRequest
 - GHUnitIOS
 - Reachability
 
 SPEC CHECKSUMS:
+  ASIHTTPRequest: a79e32b54f92471bff8979f3b82182f0e9b6992c
+  ASIHTTPRequest/ASIWebPageRequest: a79e32b54f92471bff8979f3b82182f0e9b6992c
+  ASIHTTPRequest/CloudFiles: a79e32b54f92471bff8979f3b82182f0e9b6992c
+  ASIHTTPRequest/S3: a79e32b54f92471bff8979f3b82182f0e9b6992c
   GHUnitIOS: bf149b2c44084eee2785ce4ac3675c3a699e509d
   Reachability: 1c8584c5f26fa776695efef95caaa50402c94cfb
 

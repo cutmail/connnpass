@@ -14,6 +14,8 @@
 		186F007C16D10325007E7BEC /* NavBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F006816D10325007E7BEC /* NavBack@2x.png */; };
 		186F007D16D10325007E7BEC /* NavForward.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F006916D10325007E7BEC /* NavForward.png */; };
 		186F007E16D10325007E7BEC /* NavForward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F006A16D10325007E7BEC /* NavForward@2x.png */; };
+		18A3E7CD16FDEAC0004E3757 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */; };
+		18A3E7D016FDF4C0004E3757 /* CTConnpassAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E7CF16FDF4C0004E3757 /* CTConnpassAPIClient.m */; };
 		18F98383162499B300852EF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98382162499B300852EF0 /* UIKit.framework */; };
 		18F98385162499B300852EF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98384162499B300852EF0 /* Foundation.framework */; };
 		18F98387162499B300852EF0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98386162499B300852EF0 /* CoreGraphics.framework */; };
@@ -38,6 +40,10 @@
 		186F006816D10325007E7BEC /* NavBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBack@2x.png"; sourceTree = "<group>"; };
 		186F006916D10325007E7BEC /* NavForward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavForward.png; sourceTree = "<group>"; };
 		186F006A16D10325007E7BEC /* NavForward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavForward@2x.png"; sourceTree = "<group>"; };
+		18A3E7CB16FDEAC0004E3757 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		18A3E7CE16FDF4C0004E3757 /* CTConnpassAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTConnpassAPIClient.h; sourceTree = "<group>"; };
+		18A3E7CF16FDF4C0004E3757 /* CTConnpassAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTConnpassAPIClient.m; sourceTree = "<group>"; };
 		18F9837E162499B300852EF0 /* Connnpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F98382162499B300852EF0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F98384162499B300852EF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,7 +96,8 @@
 				18F9839E162499B500852EF0 /* MasterViewController.m */,
 				18F983A0162499B500852EF0 /* DetailViewController.h */,
 				18F983A1162499B500852EF0 /* DetailViewController.m */,
-				182606B416C7DC4300B895A4 /* MainStoryboard.storyboard */,
+				18A3E7CB16FDEAC0004E3757 /* SearchViewController.h */,
+				18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -150,11 +157,14 @@
 		18F98388162499B300852EF0 /* Connnpass */ = {
 			isa = PBXGroup;
 			children = (
+				182606B416C7DC4300B895A4 /* MainStoryboard.storyboard */,
 				182C014A1632A2BA00DDF1F1 /* controller */,
 				182C01491632A2B400DDF1F1 /* view */,
 				18456A871624A6A20085350F /* model */,
 				18F98391162499B400852EF0 /* AppDelegate.h */,
 				18F98392162499B400852EF0 /* AppDelegate.m */,
+				18A3E7CE16FDF4C0004E3757 /* CTConnpassAPIClient.h */,
+				18A3E7CF16FDF4C0004E3757 /* CTConnpassAPIClient.m */,
 				18F98389162499B400852EF0 /* Supporting Files */,
 			);
 			path = Connnpass;
@@ -266,6 +276,8 @@
 				18F983A2162499B500852EF0 /* DetailViewController.m in Sources */,
 				18456A8B1624A6CB0085350F /* Event.m in Sources */,
 				182C014D1632A34F00DDF1F1 /* EventCell.m in Sources */,
+				18A3E7CD16FDEAC0004E3757 /* SearchViewController.m in Sources */,
+				18A3E7D016FDF4C0004E3757 /* CTConnpassAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

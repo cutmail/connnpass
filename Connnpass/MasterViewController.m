@@ -10,11 +10,9 @@
 #import "DetailViewController.h"
 #import "EventCell.h"
 #import "Reachability.h"
+#import "CTConnpassAPIClient.h"
 
 #import "Event.h"
-
-#define CONNPASS_API_SEARCH @"http://connpass.com/api/v1/event/?count=50&keyword_or=%@"
-#define CONNPASS_API_RECENT @"http://connpass.com/api/v1/event/?count=50"
 
 @interface MasterViewController () {
 }
@@ -30,55 +28,14 @@
 #pragma mark -
 #pragma mark Connpass
 
-- (NSData *)getData:(NSString *)url {
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
-                                             cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-    NSURLResponse *response;
-    NSError       *error;
-    NSData *result = [NSURLConnection sendSynchronousRequest:request
-                                           returningResponse:&response error:&error];
-    
-    if (result == nil) {
-        NSLog(@"NSURLConnecton error %@", error);
-    }
-    
-    return result;
-}
-
 - (NSMutableArray *)fetchRecentEvents {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    
-    NSError *error;
-    NSString *url = CONNPASS_API_RECENT;
-    
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[self getData:url] options:kNilOptions error:&error];
-    
-    NSArray *eventList = [json objectForKey:@"events"];
-    
-    for (NSDictionary *eventDic in eventList) {
-        Event* event = [[Event alloc] initWithDictionary:eventDic];
-        [result addObject:event];
-    }
-    
-    return result;
+    CTConnpassAPIClient *client = [CTConnpassAPIClient sharedInstance];
+    return [client fetchRecentEvents];
 }
 
 - (NSMutableArray *)searchEventsWithKeyword:(NSString *)keyword {
-    NSMutableArray *result = [[NSMutableArray alloc] init];
-    
-    NSError *error;
-    NSString *url = [NSString stringWithFormat:CONNPASS_API_SEARCH, keyword];
-    
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[self getData:url] options:kNilOptions error:&error];
-    
-    NSArray *eventList = [json objectForKey:@"events"];
-    
-    for (NSDictionary *eventDic in eventList) {
-        Event* event = [[Event alloc] initWithDictionary:eventDic];
-        [result addObject:event];
-    }
-    
-    return result;
+    CTConnpassAPIClient *client = [CTConnpassAPIClient sharedInstance];
+    return [client searchEventsWithKeyword:keyword];
 }
 
 - (void)loadNewData {
@@ -149,12 +106,16 @@
 {
     [super viewDidLoad];
     
+    self.title = @"新着イベント";
+    
+    self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:0];
+    
     self.tableView.rowHeight = 65.0f;
     
-    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
-    _searchBar.delegate = self;
-    _searchBar.showsCancelButton = NO;
-    _searchBar.placeholder = @"キーワードを入力";
+//    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
+//    _searchBar.delegate = self;
+//    _searchBar.showsCancelButton = NO;
+//    _searchBar.placeholder = @"キーワードを入力";
     
     self.tableView.tableHeaderView = _searchBar;
     
@@ -233,6 +194,7 @@
     
     DetailViewController *vc = [[DetailViewController alloc] init];
     vc.event = event;
+    vc.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -261,13 +223,13 @@
     [searchBar resignFirstResponder];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        DetailViewController *vc = (DetailViewController *)[segue destinationViewController];
-        vc.event = [events objectAtIndex:indexPath.row];
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+//        DetailViewController *vc = (DetailViewController *)[segue destinationViewController];
+//        vc.event = [events objectAtIndex:indexPath.row];
+//    }
+//}
 
 @end
