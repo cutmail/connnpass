@@ -23,7 +23,9 @@
         <scene sceneID="18">
             <objects>
                 <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="MasterViewController" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Connnpass" id="36"/>
+                    <navigationItem key="navigationItem" title="Connnpass" id="36">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="KY5-Xm-wLJ"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17" sceneMemberID="firstResponder"/>
             </objects>

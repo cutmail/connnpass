@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "EventCell.h"
+#import "Reachability.h"
 
 #import "Event.h"
 
@@ -81,6 +82,18 @@
 }
 
 - (void)loadNewData {
+    if ([self isConnectNetwork] == NO) {
+        [_refreshControl endRefreshing];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"通信エラー"
+                                                        message:@"ネットワークに接続できません。"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                               otherButtonTitles: nil];
+        [alert show];
+        return;
+    }
+    
     [_refreshControl beginRefreshing];
     
     main_queue = dispatch_get_main_queue();
@@ -117,6 +130,11 @@
             [_refreshControl endRefreshing];
         });
     });
+}
+
+- (BOOL)isConnectNetwork {
+    Reachability *reach = [Reachability reachabilityForInternetConnection];
+    return reach.isReachable;
 }
 
 #pragma mark -
