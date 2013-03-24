@@ -76,7 +76,7 @@
     [_refreshControl beginRefreshing];
     
     main_queue = dispatch_get_main_queue();
-    timeline_queue = dispatch_queue_create("me.cutmail.connnpass.timeline", NULL);
+    timeline_queue = dispatch_queue_create("me.cutmail.connnpass.recent", NULL);
     
     dispatch_async(timeline_queue, ^{
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
@@ -108,8 +108,6 @@
     
     self.title = @"新着イベント";
     
-    self.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemMostRecent tag:0];
-    
     self.tableView.rowHeight = 65.0f;
     
 //    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
@@ -117,7 +115,7 @@
 //    _searchBar.showsCancelButton = NO;
 //    _searchBar.placeholder = @"キーワードを入力";
     
-    self.tableView.tableHeaderView = _searchBar;
+//    self.tableView.tableHeaderView = _searchBar;
     
     _refreshControl = [[UIRefreshControl alloc] init];
     [_refreshControl addTarget:self action:@selector(beginReload) forControlEvents:UIControlEventValueChanged];
@@ -143,16 +141,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)insertNewObject:(id)sender
-//{
-//    if (!_objects) {
-//        _objects = [[NSMutableArray alloc] init];
-//    }
-//    [_objects insertObject:[NSDate date] atIndex:0];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//}
 
 #pragma mark - TableView
 
@@ -181,8 +169,6 @@
     Event *event = [events objectAtIndex:row];
     cell.title = event.title;
     cell.description = event.detail;
-//    cell.title = @"title";
-//    cell.description = @"description";
     
     return cell;
 }
@@ -222,14 +208,5 @@
 {
     [searchBar resignFirstResponder];
 }
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        DetailViewController *vc = (DetailViewController *)[segue destinationViewController];
-//        vc.event = [events objectAtIndex:indexPath.row];
-//    }
-//}
 
 @end
