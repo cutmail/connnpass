@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  Connnpass
+
+  Created by Tatsuya Arai on 2013/03/29.
+  Copyright (c) 2013年 cutmail. All rights reserved.
+*/
+
+"AAMFeedbackTitle" = "フィードバック";
+"AAMFeedbackTopicsTitle" = "トピック";
+
+"AAMFeedbackButtonMail" = "メール";
+"AAMFeedbackDescriptionPlaceholder" = "詳細をお願いいたします。";
+
+//Table Headers
+"AAMFeedbackTableHeaderTopics" = "入力事項";
+"AAMFeedbackTableHeaderBasicInfo" = "動作環境の情報";
+
+//Topics Options
+"AAMFeedbackTopicsQuestion" = "質問";
+"AAMFeedbackTopicsRequest" = "リクエスト";
+"AAMFeedbackTopicsBugReport" = "バグ報告";
+"AAMFeedbackTopicsMedia" = "マスメディア";
+"AAMFeedbackTopicsBusiness" = "ビジネス";
+"AAMFeedbackTopicsOther" = "その他";
+
+"AAMFeedbackMailDidFinishWithError" = "送信に失敗しました。しばらく時間をおいてからもう一度お試しください。";

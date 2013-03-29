@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18044AAF1705921700F3F14D /* AAMFeedbackTopicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18044AAC1705921700F3F14D /* AAMFeedbackTopicsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18044AB01705921700F3F14D /* AAMFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18044AAE1705921700F3F14D /* AAMFeedbackViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18044AB2170595AE00F3F14D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18044AB1170595AE00F3F14D /* Localizable.strings */; };
+		18044AB41705960C00F3F14D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18044AB31705960C00F3F14D /* MessageUI.framework */; };
+		181AD22A16FF3E3100524050 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181AD22916FF3E3100524050 /* Crashlytics.framework */; };
 		182606B616C7DC4300B895A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182606B416C7DC4300B895A4 /* MainStoryboard.storyboard */; };
 		182C014D1632A34F00DDF1F1 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C014C1632A34F00DDF1F1 /* EventCell.m */; };
 		18456A8B1624A6CB0085350F /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18456A8A1624A6CB0085350F /* Event.m */; };
@@ -14,6 +19,7 @@
 		186F007C16D10325007E7BEC /* NavBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F006816D10325007E7BEC /* NavBack@2x.png */; };
 		186F007D16D10325007E7BEC /* NavForward.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F006916D10325007E7BEC /* NavForward.png */; };
 		186F007E16D10325007E7BEC /* NavForward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 186F006A16D10325007E7BEC /* NavForward@2x.png */; };
+		18A11743170335DC006BA7A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A11742170335DC006BA7A7 /* SettingsViewController.m */; };
 		18A3E7CD16FDEAC0004E3757 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */; };
 		18A3E7D016FDF4C0004E3757 /* CTConnpassAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E7CF16FDF4C0004E3757 /* CTConnpassAPIClient.m */; };
 		18F98383162499B300852EF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98382162499B300852EF0 /* UIKit.framework */; };
@@ -31,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18044AAB1705921700F3F14D /* AAMFeedbackTopicsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAMFeedbackTopicsViewController.h; sourceTree = "<group>"; };
+		18044AAC1705921700F3F14D /* AAMFeedbackTopicsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAMFeedbackTopicsViewController.m; sourceTree = "<group>"; };
+		18044AAD1705921700F3F14D /* AAMFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAMFeedbackViewController.h; sourceTree = "<group>"; };
+		18044AAE1705921700F3F14D /* AAMFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAMFeedbackViewController.m; sourceTree = "<group>"; };
+		18044AB1170595AE00F3F14D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		18044AB31705960C00F3F14D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		181AD22916FF3E3100524050 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		182606B516C7DC4300B895A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		182C014B1632A34F00DDF1F1 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
 		182C014C1632A34F00DDF1F1 /* EventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCell.m; sourceTree = "<group>"; };
@@ -40,6 +53,8 @@
 		186F006816D10325007E7BEC /* NavBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavBack@2x.png"; sourceTree = "<group>"; };
 		186F006916D10325007E7BEC /* NavForward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavForward.png; sourceTree = "<group>"; };
 		186F006A16D10325007E7BEC /* NavForward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavForward@2x.png"; sourceTree = "<group>"; };
+		18A11741170335DC006BA7A7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		18A11742170335DC006BA7A7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		18A3E7CB16FDEAC0004E3757 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		18A3E7CE16FDF4C0004E3757 /* CTConnpassAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTConnpassAPIClient.h; sourceTree = "<group>"; };
@@ -70,16 +85,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18044AB41705960C00F3F14D /* MessageUI.framework in Frameworks */,
 				18F98383162499B300852EF0 /* UIKit.framework in Frameworks */,
 				18F98385162499B300852EF0 /* Foundation.framework in Frameworks */,
 				18F98387162499B300852EF0 /* CoreGraphics.framework in Frameworks */,
 				FDE7B1CD04E74A999416E0F4 /* libPods.a in Frameworks */,
+				181AD22A16FF3E3100524050 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18044AAA1705921700F3F14D /* AAMFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				18044AAB1705921700F3F14D /* AAMFeedbackTopicsViewController.h */,
+				18044AAC1705921700F3F14D /* AAMFeedbackTopicsViewController.m */,
+				18044AAD1705921700F3F14D /* AAMFeedbackViewController.h */,
+				18044AAE1705921700F3F14D /* AAMFeedbackViewController.m */,
+			);
+			path = AAMFeedback;
+			sourceTree = SOURCE_ROOT;
+		};
 		182C01491632A2B400DDF1F1 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +122,8 @@
 			children = (
 				18F9839D162499B500852EF0 /* MasterViewController.h */,
 				18F9839E162499B500852EF0 /* MasterViewController.m */,
+				18A11741170335DC006BA7A7 /* SettingsViewController.h */,
+				18A11742170335DC006BA7A7 /* SettingsViewController.m */,
 				18F983A0162499B500852EF0 /* DetailViewController.h */,
 				18F983A1162499B500852EF0 /* DetailViewController.m */,
 				18A3E7CB16FDEAC0004E3757 /* SearchViewController.h */,
@@ -146,6 +176,8 @@
 		18F98381162499B300852EF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				18044AB31705960C00F3F14D /* MessageUI.framework */,
+				181AD22916FF3E3100524050 /* Crashlytics.framework */,
 				18F98382162499B300852EF0 /* UIKit.framework */,
 				18F98384162499B300852EF0 /* Foundation.framework */,
 				18F98386162499B300852EF0 /* CoreGraphics.framework */,
@@ -157,6 +189,7 @@
 		18F98388162499B300852EF0 /* Connnpass */ = {
 			isa = PBXGroup;
 			children = (
+				18044AAA1705921700F3F14D /* AAMFeedback */,
 				182606B416C7DC4300B895A4 /* MainStoryboard.storyboard */,
 				182C014A1632A2BA00DDF1F1 /* controller */,
 				182C01491632A2B400DDF1F1 /* view */,
@@ -178,6 +211,7 @@
 				18F9838B162499B400852EF0 /* InfoPlist.strings */,
 				18F9838E162499B400852EF0 /* main.m */,
 				18F98390162499B400852EF0 /* Connnpass-Prefix.pch */,
+				18044AB1170595AE00F3F14D /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -193,6 +227,7 @@
 				18F9837B162499B300852EF0 /* Frameworks */,
 				18F9837C162499B300852EF0 /* Resources */,
 				3AB8942CD87E4F5CBCE1F5C6 /* Copy Pods Resources */,
+				181AD22816FF3DD600524050 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -243,12 +278,26 @@
 				186F007C16D10325007E7BEC /* NavBack@2x.png in Resources */,
 				186F007D16D10325007E7BEC /* NavForward.png in Resources */,
 				186F007E16D10325007E7BEC /* NavForward@2x.png in Resources */,
+				18044AB2170595AE00F3F14D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		181AD22816FF3DD600524050 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 7d0f3ef6938723ac69b416c2f9d0cfa7f9ae7437";
+		};
 		3AB8942CD87E4F5CBCE1F5C6 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +327,9 @@
 				182C014D1632A34F00DDF1F1 /* EventCell.m in Sources */,
 				18A3E7CD16FDEAC0004E3757 /* SearchViewController.m in Sources */,
 				18A3E7D016FDF4C0004E3757 /* CTConnpassAPIClient.m in Sources */,
+				18A11743170335DC006BA7A7 /* SettingsViewController.m in Sources */,
+				18044AAF1705921700F3F14D /* AAMFeedbackTopicsViewController.m in Sources */,
+				18044AB01705921700F3F14D /* AAMFeedbackViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +409,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31FC5176BBB94363A0A8BB76 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Connnpass/Connnpass-Prefix.pch";
 				INFOPLIST_FILE = "Connnpass/Connnpass-Info.plist";
@@ -369,6 +425,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 31FC5176BBB94363A0A8BB76 /* Pods.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Connnpass/Connnpass-Prefix.pch";
 				INFOPLIST_FILE = "Connnpass/Connnpass-Info.plist";

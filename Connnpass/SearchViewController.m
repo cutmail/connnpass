@@ -46,7 +46,6 @@
         dispatch_async(main_queue, ^{
             [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
             [self.tableView reloadData];
-            [_refreshControl endRefreshing];
         });
     });
 }
@@ -65,17 +64,14 @@
 
     self.title = @"検索";
     
+    self.tableView.rowHeight = 65.0f;
+    
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
     _searchBar.delegate = self;
     _searchBar.showsCancelButton = NO;
     _searchBar.placeholder = @"キーワードを入力";
     
     self.tableView.tableHeaderView = _searchBar;
-    
-//    _refreshControl = [[UIRefreshControl alloc] init];
-//    [_refreshControl addTarget:self action:@selector(beginReload) forControlEvents:UIControlEventValueChanged];
-//    
-//    self.refreshControl = _refreshControl;
 }
 
 - (void)didReceiveMemoryWarning
@@ -131,7 +127,7 @@
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if (nil == searchText || [searchText isEqualToString:@""]) {
-        [self.events removeAllObjects];
+        [events removeAllObjects];
         [self.tableView reloadData];
     }
 }

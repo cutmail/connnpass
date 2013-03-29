@@ -110,13 +110,6 @@
     
     self.tableView.rowHeight = 65.0f;
     
-//    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 44.0f)];
-//    _searchBar.delegate = self;
-//    _searchBar.showsCancelButton = NO;
-//    _searchBar.placeholder = @"キーワードを入力";
-    
-//    self.tableView.tableHeaderView = _searchBar;
-    
     _refreshControl = [[UIRefreshControl alloc] init];
     [_refreshControl addTarget:self action:@selector(beginReload) forControlEvents:UIControlEventValueChanged];
         
@@ -127,7 +120,6 @@
 
 - (void)beginReload
 {
-    NSLog(@"text: %@", _searchBar.text);
     
     if (!_searchBar.text || [_searchBar.text isEqualToString:@""]) {
         [self loadNewData];

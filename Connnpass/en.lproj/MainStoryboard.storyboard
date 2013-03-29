@@ -43,6 +43,7 @@
                     <connections>
                         <segue destination="3" kind="relationship" relationship="viewControllers" id="62Y-IM-Tfc"/>
                         <segue destination="1dY-gM-ScD" kind="relationship" relationship="viewControllers" id="kNc-V9-LRZ"/>
+                        <segue destination="gpc-Ou-k6j" kind="relationship" relationship="viewControllers" id="tab-nD-9T4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cR0-OP-Z1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -86,6 +87,32 @@
             </objects>
             <point key="canvasLocation" x="488" y="936"/>
         </scene>
+        <!--Settings View Controller - Root View Controller-->
+        <scene sceneID="vS9-9y-Fbo">
+            <objects>
+                <tableViewController id="Qsq-8C-rzV" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Hvj-2C-gv8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJH-fz-5Ix" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="1652"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fze-Mc-gYj">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="gpc-Ou-k6j" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="xoC-RB-ZOf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uSh-gF-60D">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qsq-8C-rzV" kind="relationship" relationship="rootViewController" id="mVz-yW-sXg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70E-jJ-Kb3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="1652"/>
+        </scene>
     </scenes>
     <classes>
         <class className="MasterViewController" superclassName="UITableViewController">
@@ -93,9 +120,9 @@
         </class>
         <class className="SearchViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="searchBar" candidateClass="UISearchBar"/>
-            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
