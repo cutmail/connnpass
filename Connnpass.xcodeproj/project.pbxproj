@@ -11,6 +11,8 @@
 		18044AB01705921700F3F14D /* AAMFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18044AAE1705921700F3F14D /* AAMFeedbackViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		18044AB2170595AE00F3F14D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 18044AB1170595AE00F3F14D /* Localizable.strings */; };
 		18044AB41705960C00F3F14D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18044AB31705960C00F3F14D /* MessageUI.framework */; };
+		18044AB71705A10800F3F14D /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 18044AB51705A10800F3F14D /* dot.png */; };
+		18044AB81705A10800F3F14D /* dot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18044AB61705A10800F3F14D /* dot@2x.png */; };
 		181AD22A16FF3E3100524050 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181AD22916FF3E3100524050 /* Crashlytics.framework */; };
 		182606B616C7DC4300B895A4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182606B416C7DC4300B895A4 /* MainStoryboard.storyboard */; };
 		182C014D1632A34F00DDF1F1 /* EventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182C014C1632A34F00DDF1F1 /* EventCell.m */; };
@@ -43,6 +45,8 @@
 		18044AAE1705921700F3F14D /* AAMFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAMFeedbackViewController.m; sourceTree = "<group>"; };
 		18044AB1170595AE00F3F14D /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		18044AB31705960C00F3F14D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		18044AB51705A10800F3F14D /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
+		18044AB61705A10800F3F14D /* dot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dot@2x.png"; sourceTree = "<group>"; };
 		181AD22916FF3E3100524050 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		182606B516C7DC4300B895A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		182C014B1632A34F00DDF1F1 /* EventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCell.h; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 		186F005616D102C4007E7BEC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18044AB51705A10800F3F14D /* dot.png */,
+				18044AB61705A10800F3F14D /* dot@2x.png */,
 				186F006716D10325007E7BEC /* NavBack.png */,
 				186F006816D10325007E7BEC /* NavBack@2x.png */,
 				186F006916D10325007E7BEC /* NavForward.png */,
@@ -279,6 +285,8 @@
 				186F007D16D10325007E7BEC /* NavForward.png in Resources */,
 				186F007E16D10325007E7BEC /* NavForward@2x.png in Resources */,
 				18044AB2170595AE00F3F14D /* Localizable.strings in Resources */,
+				18044AB71705A10800F3F14D /* dot.png in Resources */,
+				18044AB81705A10800F3F14D /* dot@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

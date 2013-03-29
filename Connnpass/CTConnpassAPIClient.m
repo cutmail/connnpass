@@ -13,7 +13,7 @@
 #define XXSerialQueueName "me.cutmail.connnpass.SerialQueue"
 
 #define CONNPASS_API_SEARCH @"http://connpass.com/api/v1/event/?count=50&keyword_or=%@"
-#define CONNPASS_API_RECENT @"http://connpass.com/api/v1/event/?count=50"
+#define CONNPASS_API_RECENT @"http://connpass.com/api/v1/event/?count=50&start=%d"
 
 @implementation CTConnpassAPIClient
 
@@ -52,18 +52,7 @@ static dispatch_queue_t serialQueue;
 }
 
 - (NSData *)getData:(NSString *)url {
-//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
-//                                             cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0];
-//    NSURLResponse *response;
-//    NSError       *error;
-//    NSData *result = [NSURLConnection sendSynchronousRequest:request
-//                                           returningResponse:&response error:&error];
-//    
-//    if (result == nil) {
-//        NSLog(@"NSURLConnecton error %@", error);
-//    }
-//    
-//    return result;
+
     ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
     [request setDelegate:self];
     [request setRequestMethod:@"GET"];
@@ -71,11 +60,11 @@ static dispatch_queue_t serialQueue;
     return [request responseData];
 }
 
-- (NSMutableArray *)fetchRecentEvents {
+- (NSMutableArray *)fetchRecentEventsWithOffset:(NSInteger)offset {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
     NSError *error;
-    NSString *url = CONNPASS_API_RECENT;
+    NSString *url = [NSString stringWithFormat:CONNPASS_API_RECENT, offset];
     
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:[self getData:url] options:kNilOptions error:&error];
     

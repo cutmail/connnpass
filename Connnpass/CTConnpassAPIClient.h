@@ -15,7 +15,7 @@
 + (CTConnpassAPIClient *)sharedInstance;
 
 - (NSData *)getData:(NSString *)url;
-- (NSMutableArray *)fetchRecentEvents;
+- (NSMutableArray *)fetchRecentEventsWithOffset:(NSInteger)offset;
 - (NSMutableArray *)searchEventsWithKeyword:(NSString *)keyword;
 
 @end
