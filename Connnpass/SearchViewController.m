@@ -62,7 +62,7 @@
 {
     [super viewDidLoad];
 
-    self.title = @"検索";
+    self.title = @"イベント検索";
     
     self.tableView.rowHeight = 65.0f;
     

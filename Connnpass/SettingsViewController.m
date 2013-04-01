@@ -8,6 +8,7 @@
 
 #import "SettingsViewController.h"
 #import "AAMFeedbackViewController.h"
+#import "LisenceViewController.h"
 
 @interface SettingsViewController ()
 
@@ -56,7 +57,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 3;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -67,6 +68,14 @@
 {
     UITableViewCell *cell;
     if (indexPath.row == 0) {
+        static NSString *licenseCellIdentifier = @"LicenseCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:licenseCellIdentifier];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:licenseCellIdentifier];
+            cell.textLabel.text = @"ライセンス情報";
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        }
+    } else if (indexPath.row == 1) {
         static NSString *inquiryCellIdentifier = @"InquiryCell";
         cell = [tableView dequeueReusableCellWithIdentifier:inquiryCellIdentifier];
         if (cell == nil) {
@@ -135,6 +144,9 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0 && indexPath.row == 0) {
+        LisenceViewController *lisenceViewController = [[LisenceViewController alloc] init];
+        [self.navigationController pushViewController:lisenceViewController animated:YES];
+    } else if (indexPath.section == 0 && indexPath.row == 1) {
         AAMFeedbackViewController *vc = [[AAMFeedbackViewController alloc] init];
         vc.toRecipients = [NSArray arrayWithObject:@"cutmail@gmail.com"];
         vc.ccRecipients = nil;
