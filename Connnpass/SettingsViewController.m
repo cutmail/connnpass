@@ -68,10 +68,10 @@
 {
     UITableViewCell *cell;
     if (indexPath.row == 0) {
-        static NSString *licenseCellIdentifier = @"LicenseCell";
-        cell = [tableView dequeueReusableCellWithIdentifier:licenseCellIdentifier];
+        static NSString *lisenceCellIdentifier = @"LisenceCell";
+        cell = [tableView dequeueReusableCellWithIdentifier:lisenceCellIdentifier];
         if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:licenseCellIdentifier];
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:lisenceCellIdentifier];
             cell.textLabel.text = @"ライセンス情報";
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
@@ -98,45 +98,6 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -148,7 +109,7 @@
         [self.navigationController pushViewController:lisenceViewController animated:YES];
     } else if (indexPath.section == 0 && indexPath.row == 1) {
         AAMFeedbackViewController *vc = [[AAMFeedbackViewController alloc] init];
-        vc.toRecipients = [NSArray arrayWithObject:@"cutmail@gmail.com"];
+        vc.toRecipients = [NSArray arrayWithObject:@"cutmail.app@gmail.com"];
         vc.ccRecipients = nil;
         vc.bccRecipients = nil;
         UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
