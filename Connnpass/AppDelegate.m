@@ -8,12 +8,17 @@
 
 #import "AppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
+#import "GAI.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Crashlytics startWithAPIKey:@"7d0f3ef6938723ac69b416c2f9d0cfa7f9ae7437"];
+    
+    [GAI sharedInstance].trackUncaughtExceptions = NO;
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-3314949-19"];
     
     return YES;
 }

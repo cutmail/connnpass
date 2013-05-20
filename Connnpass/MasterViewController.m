@@ -11,6 +11,7 @@
 #import "EventCell.h"
 #import "Reachability.h"
 #import "CTConnpassAPIClient.h"
+#import "GAI.h"
 
 #import "Event.h"
 
@@ -138,6 +139,8 @@
     [super viewDidLoad];
     
     self.title = @"新着イベント";
+    
+    [[GAI sharedInstance].defaultTracker trackView:@"RecentEvent"];
     
     events = [[NSMutableArray alloc] initWithCapacity:50];
     

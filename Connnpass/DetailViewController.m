@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "GAI.h"
 
 @interface DetailViewController ()
 @end
@@ -48,6 +49,8 @@
     [super viewDidLoad];
     
     self.title = [self.event title];
+    
+    [[GAI sharedInstance].defaultTracker trackView:@"Detail"];
 
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.event eventUrl]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0]];
 }

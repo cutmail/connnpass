@@ -9,6 +9,7 @@
 #import "SearchViewController.h"
 #import "CTConnpassAPIClient.h"
 #import "DetailViewController.h"
+#import "GAI.h"
 
 #import "EventCell.h"
 #import "Event.h"
@@ -63,6 +64,8 @@
     [super viewDidLoad];
 
     self.title = @"イベント検索";
+    
+    [[GAI sharedInstance].defaultTracker trackView:@"SearchEvent"];
     
     self.tableView.rowHeight = 65.0f;
     
