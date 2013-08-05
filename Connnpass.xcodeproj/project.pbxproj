@@ -26,6 +26,16 @@
 		18A11743170335DC006BA7A7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A11742170335DC006BA7A7 /* SettingsViewController.m */; };
 		18A3E7CD16FDEAC0004E3757 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */; };
 		18A3E7D016FDF4C0004E3757 /* CTConnpassAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3E7CF16FDF4C0004E3757 /* CTConnpassAPIClient.m */; };
+		18B0671517A2CAD500E0D8E5 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0670B17A2CAD500E0D8E5 /* Icon-72.png */; };
+		18B0671617A2CAD500E0D8E5 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0670C17A2CAD500E0D8E5 /* Icon-72@2x.png */; };
+		18B0671717A2CAD500E0D8E5 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0670D17A2CAD500E0D8E5 /* Icon-Small-50.png */; };
+		18B0671817A2CAD500E0D8E5 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0670E17A2CAD500E0D8E5 /* Icon-Small-50@2x.png */; };
+		18B0671917A2CAD500E0D8E5 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0670F17A2CAD500E0D8E5 /* Icon-Small.png */; };
+		18B0671A17A2CAD500E0D8E5 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0671017A2CAD500E0D8E5 /* Icon-Small@2x.png */; };
+		18B0671B17A2CAD500E0D8E5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0671117A2CAD500E0D8E5 /* Icon.png */; };
+		18B0671C17A2CAD500E0D8E5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18B0671217A2CAD500E0D8E5 /* Icon@2x.png */; };
+		18B0671D17A2CAD500E0D8E5 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 18B0671317A2CAD500E0D8E5 /* iTunesArtwork */; };
+		18B0671E17A2CAD500E0D8E5 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 18B0671417A2CAD500E0D8E5 /* iTunesArtwork@2x */; };
 		18F98383162499B300852EF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98382162499B300852EF0 /* UIKit.framework */; };
 		18F98385162499B300852EF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98384162499B300852EF0 /* Foundation.framework */; };
 		18F98387162499B300852EF0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F98386162499B300852EF0 /* CoreGraphics.framework */; };
@@ -68,6 +78,16 @@
 		18A3E7CC16FDEAC0004E3757 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		18A3E7CE16FDF4C0004E3757 /* CTConnpassAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTConnpassAPIClient.h; sourceTree = "<group>"; };
 		18A3E7CF16FDF4C0004E3757 /* CTConnpassAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTConnpassAPIClient.m; sourceTree = "<group>"; };
+		18B0670B17A2CAD500E0D8E5 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		18B0670C17A2CAD500E0D8E5 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		18B0670D17A2CAD500E0D8E5 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		18B0670E17A2CAD500E0D8E5 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		18B0670F17A2CAD500E0D8E5 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		18B0671017A2CAD500E0D8E5 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		18B0671117A2CAD500E0D8E5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		18B0671217A2CAD500E0D8E5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		18B0671317A2CAD500E0D8E5 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		18B0671417A2CAD500E0D8E5 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		18F9837E162499B300852EF0 /* Connnpass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Connnpass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F98382162499B300852EF0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		18F98384162499B300852EF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,6 +175,16 @@
 		186F005616D102C4007E7BEC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				18B0670B17A2CAD500E0D8E5 /* Icon-72.png */,
+				18B0670C17A2CAD500E0D8E5 /* Icon-72@2x.png */,
+				18B0670D17A2CAD500E0D8E5 /* Icon-Small-50.png */,
+				18B0670E17A2CAD500E0D8E5 /* Icon-Small-50@2x.png */,
+				18B0670F17A2CAD500E0D8E5 /* Icon-Small.png */,
+				18B0671017A2CAD500E0D8E5 /* Icon-Small@2x.png */,
+				18B0671117A2CAD500E0D8E5 /* Icon.png */,
+				18B0671217A2CAD500E0D8E5 /* Icon@2x.png */,
+				18B0671317A2CAD500E0D8E5 /* iTunesArtwork */,
+				18B0671417A2CAD500E0D8E5 /* iTunesArtwork@2x */,
 				18044AB51705A10800F3F14D /* dot.png */,
 				18044AB61705A10800F3F14D /* dot@2x.png */,
 				186F006716D10325007E7BEC /* NavBack.png */,
@@ -296,6 +326,16 @@
 				18044AB71705A10800F3F14D /* dot.png in Resources */,
 				18044AB81705A10800F3F14D /* dot@2x.png in Resources */,
 				1861496B1709E447008B2259 /* copying.html in Resources */,
+				18B0671517A2CAD500E0D8E5 /* Icon-72.png in Resources */,
+				18B0671617A2CAD500E0D8E5 /* Icon-72@2x.png in Resources */,
+				18B0671717A2CAD500E0D8E5 /* Icon-Small-50.png in Resources */,
+				18B0671817A2CAD500E0D8E5 /* Icon-Small-50@2x.png in Resources */,
+				18B0671917A2CAD500E0D8E5 /* Icon-Small.png in Resources */,
+				18B0671A17A2CAD500E0D8E5 /* Icon-Small@2x.png in Resources */,
+				18B0671B17A2CAD500E0D8E5 /* Icon.png in Resources */,
+				18B0671C17A2CAD500E0D8E5 /* Icon@2x.png in Resources */,
+				18B0671D17A2CAD500E0D8E5 /* iTunesArtwork in Resources */,
+				18B0671E17A2CAD500E0D8E5 /* iTunesArtwork@2x in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,7 +450,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tatsuya Arai";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tatsuya Arai";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -418,6 +459,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "85B39DA0-6E9D-453E-946B-9CEBEBA7E06E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "85B39DA0-6E9D-453E-946B-9CEBEBA7E06E";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -434,6 +477,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Connnpass/Connnpass-Prefix.pch";
 				INFOPLIST_FILE = "Connnpass/Connnpass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,6 +494,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Connnpass/Connnpass-Prefix.pch";
 				INFOPLIST_FILE = "Connnpass/Connnpass-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

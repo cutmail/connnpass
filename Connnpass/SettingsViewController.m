@@ -19,7 +19,6 @@
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    NSLog(@"init");
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
@@ -64,7 +63,7 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"iConnpassについて";
+    return @"connnpassについて";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
