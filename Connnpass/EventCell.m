@@ -46,10 +46,10 @@ static UIFont *descriptionFont;
 
 - (void)drawRect:(CGRect)rect {
     highlighted ? [[UIColor whiteColor] set] : [darkGrayColor set];
-    [cell.title drawInRect:CGRectMake(14.0f, 4.0f, cell.frame.size.width - 44.0f, 36.0f) withFont:titleFont lineBreakMode:UILineBreakModeTailTruncation];
+    [cell.title drawInRect:CGRectMake(14.0f, 4.0f, cell.frame.size.width - 44.0f, 36.0f) withFont:titleFont lineBreakMode:NSLineBreakByTruncatingTail];
     
     highlighted ? [[UIColor whiteColor] set] : [grayColor set];
-    [cell.description drawInRect:CGRectMake(14.0f, 42.0f, cell.frame.size.width - 44.0f, 20.0f) withFont:descriptionFont lineBreakMode:UILineBreakModeTailTruncation];
+    [cell.description drawInRect:CGRectMake(14.0f, 42.0f, cell.frame.size.width - 44.0f, 20.0f) withFont:descriptionFont lineBreakMode:NSLineBreakByTruncatingTail];
 }
 
 - (void)setHighlighted:(BOOL)b {

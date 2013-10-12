@@ -13,17 +13,20 @@ PODS:
   - GHUnitIOS (0.5.6)
   - GoogleAnalytics-iOS-SDK (2.0beta4)
   - Reachability (3.1.0)
+  - TUSafariActivity (1.0.0)
 
 DEPENDENCIES:
   - ASIHTTPRequest
   - GHUnitIOS
   - GoogleAnalytics-iOS-SDK
   - Reachability
+  - TUSafariActivity
 
 SPEC CHECKSUMS:
   ASIHTTPRequest: a411b8d0f006ed8fc24248be6a0c4ad2abc9b101
   GHUnitIOS: bf149b2c44084eee2785ce4ac3675c3a699e509d
-  GoogleAnalytics-iOS-SDK: ae8e58e771b6dec84c0047154cc0e550a15e6f54
+  GoogleAnalytics-iOS-SDK: acf0f1ac4dcac408d17e7766454918b7e9e2b03a
   Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  TUSafariActivity: bd9da588f5f9136ba445d89f8f86b6dccf4d46ba
 
-COCOAPODS: 0.19.1
+COCOAPODS: 0.22.3

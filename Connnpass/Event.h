@@ -12,28 +12,30 @@
     NSString* eventId;
     NSString* title;
     NSString* detail;
-    NSString* infoHtml;
     NSString* eventUrl;
     NSString* hashTag;
-    NSString* startedAt;
-    NSString* endedAt;
     NSString* limit;
     NSString* eventType;
-    NSString* address;
-    NSString* place;
-    NSString* lat;
-    NSString* lon;
-    NSString* ownerId;
-    NSString* ownerNickname;
     NSString* accepted;
     NSString* waiting;
     NSString* updatedAt;
 }
 
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *detail;
-@property (nonatomic, retain) NSString *eventUrl;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *detail;
+@property (nonatomic, strong) NSString *infoHtml;
+@property (nonatomic, strong) NSString *eventUrl;
+@property (nonatomic, strong) NSDate *startedAt;
+@property (nonatomic, strong) NSDate *endedAt;
+@property (nonatomic, strong) NSString *place;
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *lat;
+@property (nonatomic, strong) NSString *lon;
+@property (nonatomic, strong) NSString* ownerId;
+@property (nonatomic, strong) NSString* ownerNickname;
 
 - (id)initWithDictionary:(NSDictionary *)dict;
+- (NSString *)startedAtString;
+- (NSString *)endedAtString;
 
 @end

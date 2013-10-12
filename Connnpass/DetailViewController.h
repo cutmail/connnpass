@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Event.h"
 
-@interface DetailViewController : UIViewController <UIWebViewDelegate, UIActionSheetDelegate> {
+@interface DetailViewController : UIViewController <UIWebViewDelegate, UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate> {
     UIWebView *web;
     UIActionSheet *sheet;
 }
 
-@property (strong, nonatomic) id event;
+@property (strong, nonatomic) Event *event;
 
 @end
