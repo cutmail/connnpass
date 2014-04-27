@@ -2,28 +2,33 @@ PODS:
   - ASIHTTPRequest (1.8.1):
     - ASIHTTPRequest/ASIWebPageRequest
     - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/Core
     - ASIHTTPRequest/S3
-    - Reachability
   - ASIHTTPRequest/ASIWebPageRequest (1.8.1):
-    - Reachability
+    - ASIHTTPRequest/Core
   - ASIHTTPRequest/CloudFiles (1.8.1):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.1):
     - Reachability
   - ASIHTTPRequest/S3 (1.8.1):
-    - Reachability
+    - ASIHTTPRequest/Core
+  - CrashlyticsFramework (2.1.7)
   - GHUnitIOS (0.5.6)
   - GoogleAnalytics-iOS-SDK (2.0beta4)
   - Reachability (3.1.0)
 
 DEPENDENCIES:
   - ASIHTTPRequest
+  - CrashlyticsFramework
   - GHUnitIOS
   - GoogleAnalytics-iOS-SDK
   - Reachability
 
 SPEC CHECKSUMS:
-  ASIHTTPRequest: a411b8d0f006ed8fc24248be6a0c4ad2abc9b101
+  ASIHTTPRequest: c5df4900c0dcfcf02226fd96b202f4b6caf989d4
+  CrashlyticsFramework: 569d2b1c71922aa480bfdc55df4c86aedf7b215c
   GHUnitIOS: bf149b2c44084eee2785ce4ac3675c3a699e509d
-  GoogleAnalytics-iOS-SDK: ae8e58e771b6dec84c0047154cc0e550a15e6f54
-  Reachability: ba94ecd4eaa037be3d0588b38956672588530c5b
+  GoogleAnalytics-iOS-SDK: 9f3ea34de46a9b84751c6e4e2c15b2151d6db411
+  Reachability: 308e359ab9edc0992ae7881b7f631a8c34a51f16
 
-COCOAPODS: 0.19.1
+COCOAPODS: 0.32.1
