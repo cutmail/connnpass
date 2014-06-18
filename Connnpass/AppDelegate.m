@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import <Crashlytics/Crashlytics.h>
-#import "GAI.h"
 
 @implementation AppDelegate
 
@@ -18,7 +17,7 @@
     
     [GAI sharedInstance].trackUncaughtExceptions = NO;
     
-    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-3314949-19"];
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-3314949-19"];
     
     return YES;
 }

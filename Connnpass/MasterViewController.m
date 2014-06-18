@@ -11,7 +11,6 @@
 #import "EventCell.h"
 #import "Reachability.h"
 #import "CTConnpassAPIClient.h"
-#import "GAI.h"
 
 #import "Event.h"
 
@@ -140,7 +139,9 @@
     
     self.title = @"新着イベント";
     
-    [[GAI sharedInstance].defaultTracker trackView:@"RecentEvent"];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"RecentEvent"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     events = [[NSMutableArray alloc] initWithCapacity:50];
     

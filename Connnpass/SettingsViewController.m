@@ -9,7 +9,6 @@
 #import "SettingsViewController.h"
 #import "AAMFeedbackViewController.h"
 #import "LisenceViewController.h"
-#import "GAI.h"
 
 @interface SettingsViewController ()
 
@@ -41,7 +40,9 @@
     
     self.title = @"設定";
     
-    [[GAI sharedInstance].defaultTracker trackView:@"Setting"];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Setting"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 }
 
 - (void)didReceiveMemoryWarning

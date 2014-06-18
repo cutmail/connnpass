@@ -7,7 +7,6 @@
 //
 
 #import "LisenceViewController.h"
-#import "GAI.h"
 
 @interface LisenceViewController ()
 
@@ -33,7 +32,9 @@
 
     self.navigationItem.title = @"ライセンス";
     
-    [[GAI sharedInstance].defaultTracker trackView:@"Lisence"];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"License"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
     
     NSBundle *mainBundle = [NSBundle mainBundle];
     NSString *path = [mainBundle pathForResource:@"copying.html" ofType:nil];

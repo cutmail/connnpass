@@ -7,7 +7,6 @@
 //
 
 #import "DetailViewController.h"
-#import "GAI.h"
 
 @interface DetailViewController ()
 @end
@@ -50,7 +49,9 @@
     
     self.title = [self.event title];
     
-    [[GAI sharedInstance].defaultTracker trackView:@"Detail"];
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"Detail"];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 
     [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[self.event eventUrl]] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:30.0]];
 }
