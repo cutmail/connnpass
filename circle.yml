@@ -8,6 +8,4 @@ dependencies:
 
 test:
   override:
-      - set -o pipefail &&
-        xcodebuild test -scheme Connnpass | xcpretty -c -r junit -o build/test-report.xml &&
-        cp build/test-report.xml $CIRCLE_TEST_REPORTS
+    - xctool -reporter pretty -reporter junit:$CIRCLE_TEST_REPORTS/xcode/results.xml -scheme "Connnpass" -workspace Connnpass.xcworkspace -sdk iphonesimulator clean test
