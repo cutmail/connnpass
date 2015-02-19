@@ -9,5 +9,5 @@ dependencies:
 test:
   override:
       - set -o pipefail &&
-        xcodebuild test -scheme SafariActivity | xcpretty -c -r junit -o build/test-report.xml &&
+        xcodebuild test -scheme Connnpass | xcpretty -c -r junit -o build/test-report.xml &&
         cp build/test-report.xml $CIRCLE_TEST_REPORTS
