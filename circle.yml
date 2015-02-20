@@ -3,6 +3,12 @@ machine:
     LC_CTYPE: en_US.UTF-8
 
 dependencies:
+  pre:
+    - sudo gem install cocoapods --version 0.35.0
+    # CocoaPods sometimes has issues using caches
+    # between different versions of CocoaPods.
+    - pod setup
+    - pod install
   override:
     - sudo gem install xcpretty
 
